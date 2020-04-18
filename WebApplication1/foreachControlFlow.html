@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Control Flow - foreach</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: people">
+            <tr>
+                <td data-bind="text: firstName"></td>
+                <td data-bind="text: lastName"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="Scripts/knockout-3.0.0.js" type='text/javascript'></script>
+    <script type="text/javascript">
+        ko.applyBindings({
+            people: [
+                { firstName: 'John', lastName: 'Lafrata' },
+                { firstName: 'Matt', lastName: 'Daemon' },
+                { firstName: 'Charles', lastName: 'Darwin' }
+            ]
+        });
+    </script>
+</body>
+</html>

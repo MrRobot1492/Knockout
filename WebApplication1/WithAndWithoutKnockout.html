@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Knockout: With and Without Knockout</title>
+</head>
+<body>
+    <div class="page">
+        <h1>Knockout: With and Without Knockout</h1>
+        <div>
+            <h2>Without Knockout</h2>
+            Task Name :<input type="text" id="task" style="width:240px" />
+            <div id="completed"></div>
+            <div id="created"></div>
+        </div>
+        <div>
+            <h2>With Knockout (but no observables)</h2>
+            <!-- The View -->
+            Task Name :<input type="text" data-bind="value: viewModelTask.todo" style="width:240px" />
+            <div data-bind="text: viewModelTask.completed"></div>
+            <div data-bind="text: viewModelTask.createdDate"></div>
+            <!-- View Ends -->
+
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="Scripts/knockout-3.0.0.js" type='text/javascript'></script>
+        <script type="text/javascript">
+            // Note:
+            // it is likely that you would get your object from some
+            // web service, but we'll mock it for simplicity.
+            var viewModelTask = {
+                todo: "Understanding MVVM with KnockoutJS",
+                completed: "No",
+                createdDate: "09-Dec-2013"
+            }
+            $(document).ready(function () {
+
+                //Note: Manually push values from the source to the targets
+                // We'll use jQuery for simplicity, but its not required
+                $("#task").val(viewModelTask.todo);
+                $("#completed").html(viewModelTask.completed);
+                $("#created").html(viewModelTask.createdDate);
+
+                //Note: Data bind the values between the source and the targets using Knockout
+                ko.applyBindings(viewModelTask);
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <!-- View -->
+    Input Marks <input type="text" data-bind="value: marks" style="width:240px"/>
+    <div data-bind="style: { color: marks() < 50 ? 'red' : 'green' }">
+        Result
+    </div>
+
+   <!-- End -->
+   <script src="Scripts/knockout-3.0.0.js" type='text/javascript'></script>
+   <script type="text/javascript">
+       var viewModel = {
+           marks: ko.observable(100) // Positive value, so initially black
+       };
+       ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>

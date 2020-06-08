@@ -93,26 +93,59 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="attrBinding.html" />
+    <Content Include="bindingContext.html" />
+    <Content Include="checkedBinding.html" />
+    <Content Include="clickBinding.html" />
+    <Content Include="Components\amd.htm" />
+    <Content Include="Components\index.htm" />
+    <Content Include="Components\scripts\app.js" />
+    <Content Include="Components\scripts\config.js" />
+    <Content Include="Components\scripts\jquery-1.11.3.min.js" />
+    <Content Include="Components\scripts\knockout-3.3.0.js" />
+    <Content Include="Components\scripts\loader.js" />
+    <Content Include="Components\scripts\r.js" />
+    <Content Include="Components\scripts\require.js" />
+    <Content Include="Components\scripts\template-viewmodel.js" />
+    <Content Include="Components\scripts\text.js" />
+    <Content Include="Components\scripts\usersignup.js" />
+    <Content Include="Components\template.htm" />
+    <Content Include="Components\usersignup.htm" />
     <Content Include="ComputedObservables.html" />
     <Content Include="CreatingViewModelWithObservables.html" />
     <Content Include="cssBinding.html" />
+    <Content Include="customBinding.html" />
+    <Content Include="data-bindBinding.html" />
+    <Content Include="disableBinding.html" />
+    <Content Include="enableBinding.html" />
+    <Content Include="eventBinding.html" />
+    <Content Include="extendingObservables.html" />
     <Content Include="foreach%24data.html" />
     <Content Include="foreach%24index.html" />
     <Content Include="foreach%24parent.html" />
     <Content Include="foreachContainerless.html" />
     <Content Include="foreachControlFlow.html" />
+    <Content Include="hasFocusBinding.html" />
     <Content Include="htmlBinding.html" />
     <Content Include="ifControlFlow.html" />
     <Content Include="ifnotControlFlow.html" />
+    <Content Include="jsonSave.html" />
     <Content Include="MVVMWithKnockoutJS.html" />
     <Content Include="ObservableArrays.html" />
+    <Content Include="optionsBinding.html" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\computedObservables.js" />
     <Content Include="Scripts\knockout-3.0.0.debug.js" />
     <Content Include="Scripts\knockout-3.0.0.js" />
     <Content Include="Scripts\observableArrays.js" />
+    <Content Include="Scripts\submitBinding.js" />
+    <Content Include="selectedOptionsBinding.html" />
     <Content Include="styleBinding.html" />
+    <Content Include="submitBinding.html" />
+    <Content Include="templateBinding.html" />
     <Content Include="textBinding.html" />
+    <Content Include="throttleExtender.html" />
+    <Content Include="uniqueNameBinding.html" />
+    <Content Include="valueBinding.html" />
     <Content Include="visibleBinding.html" />
     <Content Include="Web.config" />
     <Content Include="WithAndWithoutKnockout.html" />
@@ -148,6 +181,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Components\packages.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

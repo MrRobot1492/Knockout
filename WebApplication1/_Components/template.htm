@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Knockout.js Template Only Components</title>
+</head>
+<body>
+    <template id='signup-template'>
+        <fieldset>
+    <legend>
+        User Sign-up
+    </legend>
+    <p><input type="text" placeholder="First Name" data-bind="value:firstname" /></p>
+    <p><input type="text" placeholder="Last Name" data-bind="value:lastname"/></p>
+   
+        <div data-bind="html: fullname"> </div>
+    
+    <p><input type="email" placeholder="Email" data-bind="value:email"/></p>
+    <p><input type="password" placeholder="Password" data-bind="value:password"/></p>
+    <p><input type="button" value="Submit" value="Create Account"/></p>
+    <div>Knockout User Sign up Component</div>
+</fieldset>
+    </template>
+    
+    <usersignup params='firstname: "Kunwar",lastname:"Last Name",email:"you@email.com"'></usersignup>
+
+    <script src="scripts/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <!-- KnockoutJs Version 3.3 -->
+    <script src="scripts/knockout-3.3.0.js" type="text/javascript"></script>
+    <script src="scripts/app.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            ko.applyBindings(userSignupModel);
+        });
+    </script>
+</body>
+</html>

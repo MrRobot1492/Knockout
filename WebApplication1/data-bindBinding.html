@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Binding Syntax - data-bind</title>
+</head>
+<body>
+  <!-- Two-way binding. Populates textbox; syncs both ways. -->
+<p>First name: <input data-bind="value: firstName, valueUpdate: 'afterKeydown'" /></p>
+ 
+<!-- One-way binding. Populates textbox; syncs only from textbox to model. -->
+<p>Last name: <input data-bind="value: lastName" /></p>
+ 
+<!-- No binding. Populates textbox, but doesn't react to any changes. -->
+<p>No Binding: <input data-bind="value: lastName.length > 8" /></p>
+<div data-bind="html:firstName" ></div>
+    <script src="Scripts/knockout-3.0.0.js" type='text/javascript'></script>
+    <script type="text/javascript">  
+        var viewModel = {
+            firstName: ko.observable("Matt"), // Observable
+            lastName: "Daemon"         // Not observable
+        };
+        ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>
